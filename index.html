@@ -105,7 +105,11 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<tw-storydata name="GREEN LEAF VOLATILES" startnode="99" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="92B25134-446C-4FF7-BE36-38BAD9CB1209" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
-  background-color: #004703;
+  background-image: url("images/grassgbv.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: #FFFAD9;
   font-family: Big Caslon, Georgia, serif;
 }
@@ -129,14 +133,18 @@ a:hover {
 
 #story {
   margin-left: 3.5em;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="mow the lawn" tags="" position="1800,250" size="100,100">@@.typed;
-You need to mow the lawn.
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">postdisplay['fadeIn-text'] = function (taskName) {
+	$('#passages').addClass('fadeIn');
+	$('.fadeIn').hide().fadeIn(800);
+    // change 10000 to whatever time you want, in milliseconds
+};</script><tw-passagedata pid="1" name="mow the lawn" tags="" position="1800,250" size="100,100">You need to mow the lawn.
 
 
 [[Mow the lawn.]]
 
-[[Leave it another week.|consequences1]]
-@@</tw-passagedata><tw-passagedata pid="2" name="Mow the lawn." tags="" position="1800,425" size="100,100">Start the mower.
+[[Leave it another week.|consequences1]]</tw-passagedata><tw-passagedata pid="2" name="Mow the lawn." tags="" position="1800,425" size="100,100">Start the mower.
 
 
 [[Let &#39;er rip.]] </tw-passagedata><tw-passagedata pid="3" name="Let &#39;er rip." tags="" position="1800,625" size="100,100">So what&#39;s your mow M.O.?
