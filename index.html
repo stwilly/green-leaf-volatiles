@@ -132,11 +132,19 @@ a:hover {
   margin-left: 3.5em;
 }
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">postdisplay['fadeIn-text'] = function (taskName) {
+html.grass body {
+  background-color: #0D2100;
+  background-image: url("images/grassbgh.png");
+}
+html.grassnight body {
+  background-color: #000712;
+  background-image: url("images/grassbghnight.png");
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">postdisplay['fadeIn-text'] = function (taskName) {
 	$('#passages').addClass('fadeIn');
 	$('.fadeIn').hide().fadeIn(800);
     // change 10000 to whatever time you want, in milliseconds
-};</script><tw-tag name="bg" color="green"></tw-tag><tw-passagedata pid="1" name="mow the lawn" tags="" position="1800,250" size="100,100">You need to mow the lawn.
+};</script><tw-tag name="bg" color="green"></tw-tag><tw-passagedata pid="1" name="mow the lawn" tags="" position="1800,250" size="100,100">&lt;&lt;removeclass &quot;html&quot;&gt;&gt;&lt;&lt;addclass &quot;html&quot; &quot;grass&quot;&gt;&gt;\
+You need to mow the lawn.
 
 
 [[Mow the lawn.]]
@@ -523,7 +531,8 @@ By the way, when did you start mowing?
 You&#39;re about done.
 
 
-[[I&#39;m properly done. I look up.]]</tw-passagedata><tw-passagedata pid="90" name="At night." tags="" position="1900,7700" size="100,100">Yeah, those neighbours are pretty riled. Cops&#39;ll be here soon.
+[[I&#39;m properly done. I look up.]]</tw-passagedata><tw-passagedata pid="90" name="At night." tags="" position="1900,7700" size="100,100">&lt;&lt;removeclass &quot;html&quot;&gt;&gt;&lt;&lt;addclass &quot;html&quot; &quot;grassnight&quot;&gt;&gt;\
+Yeah, those neighbours are pretty riled. Cops&#39;ll be here soon.
 
 But you&#39;re about done.
 
@@ -554,7 +563,8 @@ But you&#39;re about done.
 
 
 [[And then?]] </tw-passagedata><tw-passagedata pid="98" name="StoryInit" tags="" position="1500,275" size="100,100">&lt;&lt;cacheaudio &quot;bg-music&quot; &quot;audio/background.mp3&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="99" name="TITLE" tags="" position="1800,75" size="100,100">&lt;&lt;audio bg-music play&gt;&gt;
+</tw-passagedata><tw-passagedata pid="99" name="TITLE" tags="" position="1800,75" size="100,100">&lt;&lt;addclass &quot;html&quot; &quot;grass&quot;&gt;&gt;\
+&lt;&lt;audio bg-music play&gt;&gt;
 &lt;img src=&quot;images/GLVtitle.png&quot; alt=&quot;Green Leaf Volatiles&quot; /&gt;
 
 [[The grass is getting long.|mow the lawn]]</tw-passagedata></tw-storydata>
