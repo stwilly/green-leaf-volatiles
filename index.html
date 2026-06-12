@@ -143,8 +143,24 @@ html.grassnight body {
 	$('#passages').addClass('fadeIn');
 	$('.fadeIn').hide().fadeIn(800);
     // change 10000 to whatever time you want, in milliseconds
-};</script><tw-tag name="bg" color="green"></tw-tag><tw-passagedata pid="1" name="mow the lawn" tags="" position="1800,250" size="100,100">&lt;&lt;removeclass &quot;html&quot;&gt;&gt;&lt;&lt;addclass &quot;html&quot; &quot;grass&quot;&gt;&gt;\
-You need to mow the lawn.
+};
+
+// Define an array containing the file paths of all images you want to cache
+setup.cachedImages = [
+    "images/GLVtitle.png",
+    "images/grassbghnight.png",
+    "images/grassbgh.png",
+];
+
+// Create an internal memory holding area to keep the images cached
+setup.imageCache = [];
+
+// Loop through your list and preload each image
+setup.cachedImages.forEach(function (url) {
+    var img = new Image();
+    img.src = url;
+    setup.imageCache.push(img);
+});</script><tw-tag name="bg" color="green"></tw-tag><tw-passagedata pid="1" name="mow the lawn" tags="" position="1800,250" size="100,100">You need to mow the lawn.
 
 
 [[Mow the lawn.]]
@@ -429,7 +445,7 @@ You&#39;re about halfway done, now.
 You are the lawnmower.
 
 
-[[The End.|mow the lawn]]</tw-passagedata><tw-passagedata pid="66" name="I&#39;ve never heard someone say it like that." tags="" position="1800,5100" size="100,100">Oh, everyone&#39;s saying it. It&#39;s a //new thing//.
+[[The End.|TITLE]]</tw-passagedata><tw-passagedata pid="66" name="I&#39;ve never heard someone say it like that." tags="" position="1800,5100" size="100,100">Oh, everyone&#39;s saying it. It&#39;s a //new thing//.
 
 
 [[I feel ostracised.]]</tw-passagedata><tw-passagedata pid="67" name="I feel ostracised." tags="" position="1800,5300" size="100,100">Don&#39;t worry. Mow the lawn.
@@ -556,14 +572,14 @@ But you&#39;re about done.
 [[And then?]] </tw-passagedata><tw-passagedata pid="95" name="And then?" tags="" position="1600,8300" size="100,100">Then, before very long at all...
 
 
-[[I need to mow the lawn.|mow the lawn]]</tw-passagedata><tw-passagedata pid="96" name="Clear and sunny." tags="" position="1400,8100" size="100,100">... the clear and sunny day and imagine shearing anorexic termit tracings of void black through the deep, blue sky.
+[[I need to mow the lawn.|TITLE]]</tw-passagedata><tw-passagedata pid="96" name="Clear and sunny." tags="" position="1400,8100" size="100,100">... the clear and sunny day and imagine shearing anorexic termit tracings of void black through the deep, blue sky.
 
 
 [[And then?]] </tw-passagedata><tw-passagedata pid="97" name="Cloudy." tags="" position="1200,8100" size="100,100">... the cloudy day and imagine trimming woolly debris from the sky and endless grey sky.
 
 
 [[And then?]] </tw-passagedata><tw-passagedata pid="98" name="StoryInit" tags="" position="1500,275" size="100,100">&lt;&lt;cacheaudio &quot;bg-music&quot; &quot;audio/background.mp3&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="99" name="TITLE" tags="" position="1800,75" size="100,100">&lt;&lt;addclass &quot;html&quot; &quot;grass&quot;&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="99" name="TITLE" tags="" position="1800,75" size="100,100">&lt;&lt;removeclass &quot;html&quot;&gt;&gt;&lt;&lt;addclass &quot;html&quot; &quot;grass&quot;&gt;&gt;\
 &lt;&lt;audio bg-music play&gt;&gt;
 &lt;img src=&quot;images/GLVtitle.png&quot; alt=&quot;Green Leaf Volatiles&quot; /&gt;
 
